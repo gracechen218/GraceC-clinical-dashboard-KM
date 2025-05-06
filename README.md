@@ -1,21 +1,29 @@
-# Clinical Trial Dashboard (Shiny App)
+# 📊 KM Survival Dashboard (R Shiny)
 
-This R Shiny app is a simple interactive dashboard built to demonstrate clinical programming concepts such as survival analysis, adverse event summaries, and subgroup exploration.
+This is a web-based Shiny app for interactive Kaplan-Meier survival analysis.  
+Users can upload their own clinical dataset and dynamically generate KM curves, filter by parameters, and view survival estimates at key time points (0, 30, and 180 days).
 
-## Features
+---
 
-- Kaplan-Meier survival curves using `survival` and `survminer`
-- Treatment group filtering
-- Adverse event (AE) bar chart by occurrence
-- Summary statistics for selected subgroup
-- Reactive UI with tabbed navigation
+## 🚀 Features
 
-## Mock Data
+- Upload clinical data in `.csv`, `.xlsx`, or `.sas7bdat` format
+- Dynamically select:
+  - Time-to-event variable
+  - Censoring indicator
+  - Grouping variable
+  - `PARAMCD` filter (e.g., Death, MAE, HFH)
+- Interactive Kaplan-Meier curve using `ggplot2` + `plotly`
+- Summary survival probability table at 0, 30, and 180 days
+- Works without `survminer` (uses tidyverse + broom workflow)
 
-The app uses simulated clinical trial data, mimicking an ADTTE-like dataset:
-- `AVAL`: Time-to-event
-- `CNSR`: Censoring flag
-- `TRT01P`: Treatment group
-- `AEFLAG`: AE presence indicator
+---
+
+## 📂 File Structure
+shiny-clinical-dashboard/
+ ─ app.R # Main Shiny application file
+ ─ README.md # You're reading it
+ ─ ADTTE.csv # Sample ADTTE dataset for testing
+
 
 
