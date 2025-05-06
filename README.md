@@ -20,6 +20,16 @@ Users can upload their own clinical dataset and dynamically generate KM curves, 
 ---
 
 ## 📂 File Structure
+
+- app.R # Main Shiny application file
+- README.md # You're reading it
+- ADTTE.csv # Sample ADTTE dataset for testing
+- Make_ADTTE.r # Sample R code to simulate ADTTE data
+
+
+
+
+
 shiny-clinical-dashboard/
  ─ app.R # Main Shiny application file
  ─ README.md # You're reading it
